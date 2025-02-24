@@ -365,7 +365,7 @@ app.get("/api/v1/dashboard", userMiddleware, (req, res) => {
 
 
 const port = process.env.PORT || 3000;
-export default app;
-// app.listen(port, () => {
-//     console.log(`Server running on port ${port}`);
-// });
+// export default app;
+app.listen(port, () => {
+    console.log(`Server running on port ${port}`);
+});
