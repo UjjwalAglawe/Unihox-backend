@@ -111,6 +111,7 @@ app.post("/api/v1/signin/password", async (req, res) => {
             return res.status(400).json({ message: "Email and password are required" });
         }
         console.log("before finding user");
+        console.log("URL",process.env.MONGO_URL);
         
         const user = await userModel.findOne({ email });
         console.log("After finding user");
